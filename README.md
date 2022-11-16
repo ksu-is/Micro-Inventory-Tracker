@@ -2,6 +2,7 @@
 Track it all!
 
 Welcome to the Microsystems Inventory Tracker
+
 This project and application GUI will be used by Microsystems employees to accurately track and manage IT equipment.
 
 To get started, open the application ... (to be continued)
