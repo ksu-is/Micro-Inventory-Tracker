@@ -1,11 +1,17 @@
-# Micro-Inventory-Tracker
-Track it all!
+# Micro-Lifecycle-Tracker
 
-Welcome to the Microsystems Inventory Tracker
+#Welcome to the The Micro Lifecycle Tracker
 
-This project and application GUI will be used by Microsystems employees to accurately track and manage IT equipment.
+This application is to be used by the client to track and manage the lifecycle of enterprise IS equipment.
 
-To get started, open the application ... (to be continued)
+Upon entry into a database, standard equipment is given a 36 month lifecycle. Enabling greater visibility throughout the organization, Micro Tracker will notify with ease of upcoming upgrades. Automatic reporting is to alert interested parties on a yearly basis.
 
 
-Matthew Stamper is the primary holder of this project. If you have any questions about functionality or need help troubleshooting, you can reach him at mstampe1@students.kennesaw.edu.
+#Entry into Micro Lifecycle Tracker
+
+    PC Name
+    Serial Number 
+    Deployment Tech
+    Department Tag
+
+#
