@@ -7,4 +7,4 @@ This project and application GUI will be used by Microsystems employees to accur
 To get started, open the application ... (to be continued)
 
 
-Matthew Stamper is the primary holder of this project. If you have any questions are functionality or need help troubleshooting, you can reach him at mstampe1@students.kennesaw.edu.
+Matthew Stamper is the primary holder of this project. If you have any questions about functionality or need help troubleshooting, you can reach him at mstampe1@students.kennesaw.edu.
