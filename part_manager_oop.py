@@ -12,7 +12,7 @@ class Application(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
         self.master = master
-        master.title('Part Manager')
+        master.title('Microsystems Inventory Tracker')
         # Width height
         master.geometry("700x350")
         # Create widgets/grid
@@ -30,7 +30,7 @@ class Application(tk.Frame):
         self.part_label.grid(row=0, column=0, sticky=tk.W)
         self.part_entry = tk.Entry(self.master, textvariable=self.part_text)
         self.part_entry.grid(row=0, column=1)
-        # Customer
+        # Customer (New-Price)
         self.customer_text = tk.StringVar()
         self.customer_label = tk.Label(
             self.master, text='Price', font=('bold', 14))
@@ -53,6 +53,13 @@ class Application(tk.Frame):
         self.price_label.grid(row=1, column=2, sticky=tk.W)
         self.price_entry = tk.Entry(self.master, textvariable=self.price_text)
         self.price_entry.grid(row=1, column=3)
+        # Test
+        self.test_text = tk.StringVar()
+        self.test_label = tk.Label(
+            self.master, text='Test', font=('bold', 14))
+        self.test_label.grid(row=0, column=4, sticky=tk.W)
+        self.test_entry = tk.Entry(self.master, textvariable=self.test_text)
+        self.test_entry.grid(row=0, column=5)
 
         # Parts list (listbox)
         self.parts_list = tk.Listbox(self.master, height=8, width=50, border=0)
