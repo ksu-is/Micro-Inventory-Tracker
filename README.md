@@ -1,4 +1,4 @@
-# Micro-Lifecycle-Tracker
+# Micro-Inventory-Tracker
 
 #Welcome to the The Micro Inventory Tracker
 
