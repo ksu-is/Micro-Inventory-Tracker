@@ -1,10 +1,10 @@
 # Micro-Lifecycle-Tracker
 
-#Welcome to the The Micro Lifecycle Tracker
+#Welcome to the The Micro Inventory Tracker
 
-This application is to be used by the client to track and manage the lifecycle of enterprise IS equipment.
+This application is to be used by the client to track and manage the current stock of enterprise IS equipment.
 
-Upon entry into a database, standard equipment is given a 36 month lifecycle. Enabling greater visibility throughout the organization, Micro Tracker will notify with ease of upcoming upgrades. Automatic reporting is to alert interested parties on a yearly basis.
+Upon entry into the tkinter GUI, equipment equipment can be tracked of model, make, inventory, and supplier. 
 
 
 #Entry into Micro Lifecycle Tracker
