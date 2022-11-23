@@ -137,3 +137,4 @@ app.mainloop()
 # '''
 # pyinstaller --onefile --add-binary='/System/Library/Frameworks/Tk.framework/Tk':'tk' --add-binary='/System/Library/Frameworks/Tcl.framework/Tcl':'tcl' part_manager.py
 # '''
+#test push
