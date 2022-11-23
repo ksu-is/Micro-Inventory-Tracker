@@ -12,14 +12,14 @@ def populate_list():
 
 
 def add_item():
-    if part_text.get() == '' or sku_text.get() == '' or supplier_text.get() == '' or price_text.get() == '' or inventory_text.get():
+    if part_text.get() == '' or sku_text.get() == '' or supplier_text.get() == '' or price_text.get():
         messagebox.showerror('Required Fields', 'Please include all fields')
         return
     db.insert(part_text.get(), sku_text.get(),
-              supplier_text.get(), price_text.get(), inventory_text.get())
+              supplier_text.get(), price_text.get())
     parts_list.delete(0, END)
     parts_list.insert(END, (part_text.get(), sku_text.get(),
-                            supplier_text.get(), price_text.get(), inventory_text.get()))
+                            supplier_text.get(), price_text.get()))
     clear_text()
     populate_list()
 
@@ -52,7 +52,7 @@ def remove_item():
 
 def update_item():
     db.update(selected_item[0], part_text.get(), sku_text.get(),
-              supplier_text.get(), price_text.get(), inventory_text.get())
+              supplier_text.get(), price_text.get())
     populate_list()
 
 
