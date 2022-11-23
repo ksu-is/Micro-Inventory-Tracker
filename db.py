@@ -6,7 +6,7 @@ class Database:
         self.conn = sqlite3.connect(db)
         self.cur = self.conn.cursor()
         self.cur.execute(
-            "CREATE TABLE IF NOT EXISTS parts (id INTEGER PRIMARY KEY, part text, customer text, retailer text, price text)")
+            "CREATE TABLE IF NOT EXISTS parts (id INTEGER PRIMARY KEY, part text, sku text, supplier text, price text, inventory text)")
         self.conn.commit()
 
     def fetch(self):
@@ -14,18 +14,18 @@ class Database:
         rows = self.cur.fetchall()
         return rows
 
-    def insert(self, part, customer, retailer, price, inventory):
-        self.cur.execute("INSERT INTO parts VALUES (NULL, ?, ?, ?, ?)",
-                         (part, customer, retailer, price, inventory))
+    def insert(self, part, sku, supplier, price, inventory):
+        self.cur.execute("INSERT INTO parts VALUES (NULL, ?, ?, ?, ?, ?)",
+                         (part, sku, supplier, price, inventory))
         self.conn.commit()
 
     def remove(self, id):
         self.cur.execute("DELETE FROM parts WHERE id=?", (id,))
         self.conn.commit()
 
-    def update(self, id, part, customer, retailer, price, inventory):
-        self.cur.execute("UPDATE parts SET part = ?, customer = ?, retailer = ?, price = ? WHERE id = ?",
-                         (part, customer, retailer, price, inventory, id))
+    def update(self, id, part, sku, supplier, price):
+        self.cur.execute("UPDATE parts SET part = ?, sku = ?, supplier = ?, price = ?, WHERE id = ?"
+                         (part, sku, supplier, price, id))
         self.conn.commit()
 
     def __del__(self):
