@@ -14,18 +14,18 @@ class Database:
         rows = self.cur.fetchall()
         return rows
 
-    def insert(self, part, customer, retailer, price):
+    def insert(self, part, customer, retailer, price, inventory):
         self.cur.execute("INSERT INTO parts VALUES (NULL, ?, ?, ?, ?)",
-                         (part, customer, retailer, price))
+                         (part, customer, retailer, price, inventory))
         self.conn.commit()
 
     def remove(self, id):
         self.cur.execute("DELETE FROM parts WHERE id=?", (id,))
         self.conn.commit()
 
-    def update(self, id, part, customer, retailer, price):
+    def update(self, id, part, customer, retailer, price, inventory):
         self.cur.execute("UPDATE parts SET part = ?, customer = ?, retailer = ?, price = ? WHERE id = ?",
-                         (part, customer, retailer, price, id))
+                         (part, customer, retailer, price, inventory, id))
         self.conn.commit()
 
     def __del__(self):
