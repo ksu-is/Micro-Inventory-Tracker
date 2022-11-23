@@ -53,10 +53,10 @@ class Application(tk.Frame):
         self.price_label.grid(row=1, column=2, sticky=tk.W)
         self.price_entry = tk.Entry(self.master, textvariable=self.price_text)
         self.price_entry.grid(row=1, column=3)
-        # Test
+        # Stock
         self.inventory_text = tk.StringVar()
         self.inventory_label = tk.Label(
-            self.master, text='Test', font=('bold', 14))
+            self.master, text='Stock', font=('bold', 14))
         self.inventory_label.grid(row=0, column=5, sticky=tk.W)
         self.inventory_entry = tk.Entry(self.master, textvariable=self.inventory_text)
         self.inventory_entry.grid(row=0, column=6)
@@ -102,19 +102,19 @@ class Application(tk.Frame):
 
     # Add new item
     def add_item(self):
-        if self.part_text.get() == '' or self.sku_text.get() == '' or self.supplier_text.get() == '' or self.price_text.get() == '':
+        if self.part_text.get() == '' or self.sku_text.get() == '' or self.supplier_text.get() == '' or self.price_text.get() == '' or self.inventory_text.get() == '':
             messagebox.showerror(
                 "Required Fields", "Please include all fields")
             return
         print(self.part_text.get())
         # Insert into DB
         db.insert(self.part_text.get(), self.sku_text.get(),
-                  self.supplier_text.get(), self.price_text.get())
+                  self.supplier_text.get(), self.price_text.get(), self.inventory.get())
         # Clear list
         self.parts_list.delete(0, tk.END)
         # Insert into list
         self.parts_list.insert(tk.END, (self.part_text.get(), self.sku_text.get(
-        ), self.supplier_text.get(), self.price_text.get()))
+        ), self.supplier_text.get(), self.price_text.get(), self.inventory.get()))
         self.clear_text()
         self.populate_list()
 
@@ -138,6 +138,8 @@ class Application(tk.Frame):
             self.supplier_entry.insert(tk.END, self.selected_item[3])
             self.price_entry.delete(0, tk.END)
             self.price_entry.insert(tk.END, self.selected_item[4])
+            self.inventory_entry.delete(0, tk.END)
+            self.inventory_entry.insert(tk.END, self.selected_item[5])
         except IndexError:
             pass
 
