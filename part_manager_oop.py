@@ -33,7 +33,7 @@ class Application(tk.Frame):
         # Customer
         self.customer_text = tk.StringVar()
         self.customer_label = tk.Label(
-            self.master, text='Customer', font=('bold', 14))
+            self.master, text='Price', font=('bold', 14))
         self.customer_label.grid(row=0, column=2, sticky=tk.W)
         self.customer_entry = tk.Entry(
             self.master, textvariable=self.customer_text)
@@ -41,7 +41,7 @@ class Application(tk.Frame):
         # Retailer
         self.retailer_text = tk.StringVar()
         self.retailer_label = tk.Label(
-            self.master, text='Retailer', font=('bold', 14))
+            self.master, text='Supplier', font=('bold', 14))
         self.retailer_label.grid(row=1, column=0, sticky=tk.W)
         self.retailer_entry = tk.Entry(
             self.master, textvariable=self.retailer_text)
@@ -49,7 +49,7 @@ class Application(tk.Frame):
         # Price
         self.price_text = tk.StringVar()
         self.price_label = tk.Label(
-            self.master, text='Price', font=('bold', 14))
+            self.master, text='Stock No', font=('bold', 14))
         self.price_label.grid(row=1, column=2, sticky=tk.W)
         self.price_entry = tk.Entry(self.master, textvariable=self.price_text)
         self.price_entry.grid(row=1, column=3)
